@@ -3,12 +3,17 @@ package dev.pintas.launcher
 import android.content.Context
 import org.json.JSONArray
 
-/** Satu layanan di daftar. [icon] adalah nama file drawable (tanpa ekstensi), boleh kosong. */
+/**
+ * Satu layanan di daftar.
+ * [icon] = nama file drawable (tanpa ekstensi), boleh kosong.
+ * [tip]  = petunjuk singkat yang ditampilkan sekali sebelum layanan pertama kali dibuka, boleh kosong.
+ */
 data class Service(
     val id: String,
     val name: String,
     val url: String,
     val icon: String,
+    val tip: String,
 )
 
 /** Membaca daftar layanan dari assets/services.json (tanpa library tambahan). */
@@ -22,6 +27,7 @@ fun loadServices(context: Context): List<Service> {
             name = o.getString("name"),
             url = o.getString("url"),
             icon = o.optString("icon", ""),
+            tip = o.optString("tip", ""),
         )
     }.filter { it.url.startsWith("https://") } // hanya HTTPS
 }
