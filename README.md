@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/34625177/README.md)
 # Pintas
 
 A lightweight Android launcher that gathers links to Google services on a single screen.
