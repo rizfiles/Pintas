@@ -1,43 +1,286 @@
 [
-  { "id": "gmail", "name": "Gmail", "url": "https://mail.google.com/", "icon": "ic_gmail",
-    "tip": "Di tampilan mobile, Gmail bisa meminta login ulang. Aktifkan \"Situs desktop\" lewat menu ⋮ di Custom Tab. Pengaturan ini biasanya berlaku juga untuk layanan Google lain." },
-  { "id": "drive", "name": "Drive", "url": "https://drive.google.com/", "icon": "ic_drive" },
-  { "id": "photos", "name": "Foto", "url": "https://photos.google.com/", "icon": "ic_photos" },
-  { "id": "maps", "name": "Maps", "url": "https://www.google.com/maps", "icon": "ic_maps",
-    "tip": "Di tampilan mobile, Maps bisa menampilkan ajakan memasang aplikasi. Aktifkan \"Situs desktop\" lewat menu ⋮ di Custom Tab." },
-  { "id": "youtube", "name": "YouTube", "url": "https://m.youtube.com/", "icon": "ic_youtube" },
-  { "id": "ytmusic", "name": "YouTube Music", "url": "https://music.youtube.com/", "icon": "ic_ytmusic" },
-  { "id": "news", "name": "Berita", "url": "https://news.google.com/", "icon": "ic_news" },
-  { "id": "meet", "name": "Meet", "url": "https://meet.google.com/", "icon": "ic_meet",
-    "tip": "Di tampilan mobile, Meet mengarahkan ke Play Store. Aktifkan \"Situs desktop\" lewat menu ⋮ di Custom Tab." },
-  { "id": "keep", "name": "Keep", "url": "https://keep.google.com/", "icon": "ic_keep" },
-  { "id": "calendar", "name": "Kalender", "url": "https://calendar.google.com/", "icon": "ic_calendar" },
-  { "id": "docs", "name": "Dokumen", "url": "https://docs.google.com/document/", "icon": "ic_docs",
-    "tip": "Di tampilan mobile, Dokumen bisa menampilkan halaman login. Aktifkan \"Situs desktop\" lewat menu ⋮ di Custom Tab." },
-  { "id": "gemini", "name": "Gemini", "url": "https://gemini.google.com/", "icon": "ic_gemini" },
-
-  { "id": "sheets", "name": "Spreadsheet", "url": "https://docs.google.com/spreadsheets/", "icon": "ic_sheets" },
-  { "id": "slides", "name": "Slide", "url": "https://docs.google.com/presentation/", "icon": "ic_slides" },
-  { "id": "forms", "name": "Formulir", "url": "https://docs.google.com/forms/", "icon": "ic_forms" },
-  { "id": "contacts", "name": "Kontak", "url": "https://contacts.google.com/", "icon": "ic_contacts" },
-  { "id": "chat", "name": "Chat", "url": "https://chat.google.com/", "icon": "ic_chat" },
-  { "id": "classroom", "name": "Classroom", "url": "https://classroom.google.com/", "icon": "ic_classroom" },
-  { "id": "voice", "name": "Voice", "url": "https://voice.google.com/", "icon": "ic_voice" },
-  { "id": "notebooklm", "name": "NotebookLM", "url": "https://notebooklm.google.com/", "icon": "ic_notebooklm" },
-  { "id": "aistudio", "name": "AI Studio", "url": "https://aistudio.google.com/", "icon": "ic_aistudio" },
-  { "id": "search", "name": "Pencarian", "url": "https://www.google.com/", "icon": "ic_search" },
-  { "id": "translate", "name": "Terjemahan", "url": "https://translate.google.com/", "icon": "ic_translate" },
-  { "id": "lens", "name": "Lens", "url": "https://lens.google.com/", "icon": "ic_lens" },
-  { "id": "scholar", "name": "Scholar", "url": "https://scholar.google.com/", "icon": "ic_scholar" },
-  { "id": "books", "name": "Buku", "url": "https://books.google.com/", "icon": "ic_books" },
-  { "id": "earth", "name": "Earth", "url": "https://earth.google.com/web/", "icon": "ic_earth" },
-  { "id": "trends", "name": "Trends", "url": "https://trends.google.com/", "icon": "ic_trends" },
-  { "id": "finance", "name": "Finansial", "url": "https://www.google.com/finance/", "icon": "ic_finance" },
-  { "id": "flights", "name": "Penerbangan", "url": "https://www.google.com/travel/flights", "icon": "ic_flights" },
-  { "id": "shopping", "name": "Belanja", "url": "https://shopping.google.com/", "icon": "ic_shopping" },
-  { "id": "arts", "name": "Arts & Culture", "url": "https://artsandculture.google.com/", "icon": "ic_arts" },
-  { "id": "play", "name": "Play Store", "url": "https://play.google.com/store", "icon": "ic_play" },
-  { "id": "account", "name": "Akun Google", "url": "https://myaccount.google.com/", "icon": "ic_account" },
-  { "id": "blogger", "name": "Blogger", "url": "https://www.blogger.com/", "icon": "ic_blogger" },
-  { "id": "sites", "name": "Sites", "url": "https://sites.google.com/", "icon": "ic_sites" }
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "url": "https://gemini.google.com",
+    "category": "Main",
+    "icon": "ic_gemini"
+  },
+  {
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "url": "https://notebooklm.google.com/",
+    "category": "Main",
+    "icon": "ic_notebooklm"
+  },
+  {
+    "id": "aistudio",
+    "name": "AI Studio",
+    "url": "https://aistudio.google.com/",
+    "category": "Main",
+    "icon": "ic_aistudio"
+  },
+  {
+    "id": "gmail",
+    "name": "Gmail",
+    "url": "https://mail.google.com",
+    "category": "Comms",
+    "icon": "ic_gmail",
+    "tip": "Di tampilan mobile, Gmail bisa meminta login ulang. Aktifkan \"Situs desktop\" lewat menu ⋮ di Custom Tab. Pengaturan ini biasanya berlaku juga untuk layanan Google lain."
+  },
+  {
+    "id": "contacts",
+    "name": "Contacts",
+    "url": "https://contacts.google.com",
+    "category": "Comms",
+    "icon": "ic_contacts"
+  },
+  {
+    "id": "chat",
+    "name": "Chat",
+    "url": "https://chat.google.com",
+    "category": "Comms",
+    "icon": "ic_chat"
+  },
+  {
+    "id": "meet",
+    "name": "Meet",
+    "url": "https://meet.google.com",
+    "category": "Comms",
+    "icon": "ic_meet",
+    "tip": "Di tampilan mobile, Meet mengarahkan ke Play Store. Aktifkan \"Situs desktop\" lewat menu ⋮ di Custom Tab."
+  },
+  {
+    "id": "voice",
+    "name": "Voice",
+    "url": "https://voice.google.com/",
+    "category": "Comms",
+    "icon": "ic_voice"
+  },
+  {
+    "id": "drive",
+    "name": "Drive",
+    "url": "https://drive.google.com",
+    "category": "Work",
+    "icon": "ic_drive"
+  },
+  {
+    "id": "docs",
+    "name": "Docs",
+    "url": "https://docs.google.com",
+    "category": "Work",
+    "icon": "ic_docs",
+    "tip": "Di tampilan mobile, Docs bisa menampilkan halaman login. Aktifkan \"Situs desktop\" lewat menu ⋮ di Custom Tab."
+  },
+  {
+    "id": "sheets",
+    "name": "Sheets",
+    "url": "https://sheets.google.com",
+    "category": "Work",
+    "icon": "ic_sheets"
+  },
+  {
+    "id": "slides",
+    "name": "Slides",
+    "url": "https://slides.google.com",
+    "category": "Work",
+    "icon": "ic_slides"
+  },
+  {
+    "id": "keep",
+    "name": "Keep",
+    "url": "https://keep.google.com",
+    "category": "Work",
+    "icon": "ic_keep"
+  },
+  {
+    "id": "calendar",
+    "name": "Calendar",
+    "url": "https://calendar.google.com",
+    "category": "Work",
+    "icon": "ic_calendar"
+  },
+  {
+    "id": "tasks",
+    "name": "Tasks",
+    "url": "https://tasks.google.com",
+    "category": "Work",
+    "icon": "ic_tasks"
+  },
+  {
+    "id": "forms",
+    "name": "Forms",
+    "url": "https://forms.google.com",
+    "category": "Work",
+    "icon": "ic_forms"
+  },
+  {
+    "id": "sites",
+    "name": "Sites",
+    "url": "https://sites.google.com/",
+    "category": "Work",
+    "icon": "ic_sites"
+  },
+  {
+    "id": "photos",
+    "name": "Photos",
+    "url": "https://photos.google.com",
+    "category": "Media",
+    "icon": "ic_photos"
+  },
+  {
+    "id": "youtube",
+    "name": "YouTube",
+    "url": "https://youtube.com",
+    "category": "Media",
+    "icon": "ic_youtube"
+  },
+  {
+    "id": "ytmusic",
+    "name": "YouTube Music",
+    "url": "https://music.youtube.com",
+    "category": "Media",
+    "icon": "ic_ytmusic"
+  },
+  {
+    "id": "ytstudio",
+    "name": "YouTube Studio",
+    "url": "https://studio.youtube.com",
+    "category": "Media",
+    "icon": "ic_ytstudio"
+  },
+  {
+    "id": "playgames",
+    "name": "Play Games",
+    "url": "https://play.google.com/store/games",
+    "category": "Media",
+    "icon": "ic_playgames"
+  },
+  {
+    "id": "arts",
+    "name": "Arts & Culture",
+    "url": "https://artsandculture.google.com/",
+    "category": "Media",
+    "icon": "ic_arts"
+  },
+  {
+    "id": "maps",
+    "name": "Maps",
+    "url": "https://maps.google.com",
+    "category": "Maps",
+    "icon": "ic_maps",
+    "tip": "Di tampilan mobile, Maps bisa menampilkan ajakan memasang aplikasi. Aktifkan \"Situs desktop\" lewat menu ⋮ di Custom Tab."
+  },
+  {
+    "id": "earth",
+    "name": "Earth",
+    "url": "https://earth.google.com",
+    "category": "Maps",
+    "icon": "ic_earth"
+  },
+  {
+    "id": "flights",
+    "name": "Flights",
+    "url": "https://www.google.com/travel/flights",
+    "category": "Maps",
+    "icon": "ic_flights"
+  },
+  {
+    "id": "news",
+    "name": "News",
+    "url": "https://news.google.com",
+    "category": "Info",
+    "icon": "ic_news"
+  },
+  {
+    "id": "trends",
+    "name": "Trends",
+    "url": "https://trends.google.com/",
+    "category": "Info",
+    "icon": "ic_trends"
+  },
+  {
+    "id": "translate",
+    "name": "Translate",
+    "url": "https://translate.google.com",
+    "category": "Info",
+    "icon": "ic_translate"
+  },
+  {
+    "id": "finddevice",
+    "name": "Find My Device",
+    "url": "https://google.com/android/find",
+    "category": "Info",
+    "icon": "ic_finddevice"
+  },
+  {
+    "id": "classroom",
+    "name": "Classroom",
+    "url": "https://classroom.google.com",
+    "category": "Edu",
+    "icon": "ic_classroom"
+  },
+  {
+    "id": "scholar",
+    "name": "Scholar",
+    "url": "https://scholar.google.com/",
+    "category": "Edu",
+    "icon": "ic_scholar"
+  },
+  {
+    "id": "books",
+    "name": "Books",
+    "url": "https://books.google.com/",
+    "category": "Edu",
+    "icon": "ic_books"
+  },
+  {
+    "id": "admin",
+    "name": "Admin",
+    "url": "https://admin.google.com",
+    "category": "Business",
+    "icon": "ic_admin"
+  },
+  {
+    "id": "bizprofile",
+    "name": "Business Profile",
+    "url": "https://business.google.com",
+    "category": "Business",
+    "icon": "ic_bizprofile"
+  },
+  {
+    "id": "analytics",
+    "name": "Analytics",
+    "url": "https://analytics.google.com",
+    "category": "Business",
+    "icon": "ic_analytics"
+  },
+  {
+    "id": "ads",
+    "name": "Ads",
+    "url": "https://ads.google.com",
+    "category": "Business",
+    "icon": "ic_ads"
+  },
+  {
+    "id": "adsense",
+    "name": "AdSense",
+    "url": "https://adsense.google.com",
+    "category": "Business",
+    "icon": "ic_adsense"
+  },
+  {
+    "id": "blogger",
+    "name": "Blogger",
+    "url": "https://blogger.com",
+    "category": "Business",
+    "icon": "ic_blogger"
+  },
+  {
+    "id": "firebase",
+    "name": "Firebase",
+    "url": "https://console.firebase.google.com",
+    "category": "Business",
+    "icon": "ic_firebase"
+  }
 ]
