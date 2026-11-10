@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">Pintas</string>
     <string name="no_browser">Tidak ada browser yang bisa membuka tautan ini</string>
+    <string name="tip_open">Buka</string>
+    <string name="tip_disable">Jangan tampilkan tips lagi</string>
 </resources>
