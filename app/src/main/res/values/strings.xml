@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pintas</string>
+    <string name="no_browser">Tidak ada browser yang bisa membuka tautan ini</string>
+</resources>

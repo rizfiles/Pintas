@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PLACEHOLDER: ganti dengan ikon aplikasimu sendiri. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp" android:height="48dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+    <path android:fillColor="#FFFFFF" android:pathData="M5,5h6v6h-6z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M13,5h6v6h-6z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M5,13h6v6h-6z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M13,13h6v6h-6z" />
+</vector>
