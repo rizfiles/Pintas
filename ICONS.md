@@ -1,13 +1,17 @@
+[Uploading ICONS.md…]()
 # Catatan Ikon
 
-Ikon layanan Google (Gmail, Drive, dsb.) adalah merek dagang Google LLC dan **tidak**
-tercakup oleh lisensi proyek ini. Ikon tersebut hanya dipakai kecil, tanpa diubah, untuk
-menunjukkan layanan mana yang akan dibuka.
+Semua ikon layanan di aplikasi ini adalah **Material Symbols** (gaya Outlined) buatan Google,
+berlisensi **Apache License 2.0**: https://github.com/google/material-design-icons
+Ikon itu bebas dipakai dan didistribusikan ulang sesuai lisensi tersebut.
 
-Cara menambah ikon: taruh file di `app/src/main/res/drawable/` dengan nama yang sama
-dengan field `"icon"` di `app/src/main/assets/services.json` (mis. `ic_gmail.xml` atau `ic_gmail.png`).
-Jika file tidak ada, aplikasi memakai ikon generik `ic_service_default`.
+Aplikasi ini **tidak memakai logo atau ikon produk resmi Google**. Nama produk (Gmail, Drive,
+YouTube, dsb.) adalah merek dagang Google LLC dan hanya disebut untuk menunjukkan layanan
+mana yang akan dibuka. Proyek ini tidak berafiliasi dengan Google.
 
-Sumber ikon resmi: https://about.google/brand-resource-center/
-Pelajari aturannya sebelum memakai: jangan diubah, jangan dijadikan bagian logo aplikasi,
-jangan menyiratkan afiliasi dengan Google.
+## Mengganti atau menambah ikon
+Taruh file di `app/src/main/res/drawable/` dengan nama yang sama dengan field `"icon"`
+di `app/src/main/assets/services.json` (mis. `ic_gmail.xml`). Jika file tidak ada,
+aplikasi memakai ikon generik `ic_service_default`.
+
+Warna ikon ditentukan per kategori di `MainActivity.kt` (`categoryColors`).
