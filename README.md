@@ -1,3 +1,4 @@
+[README.md](https://github.com/user-attachments/files/34625177/README.md)
 # Pintas
 
 Peluncur ringan di Android yang mengumpulkan tautan ke layanan Google dalam satu layar.
