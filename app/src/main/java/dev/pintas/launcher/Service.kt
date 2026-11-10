@@ -5,13 +5,15 @@ import org.json.JSONArray
 
 /**
  * Satu layanan di daftar.
- * [icon] = nama file drawable (tanpa ekstensi), boleh kosong.
- * [tip]  = petunjuk singkat yang ditampilkan sekali sebelum layanan pertama kali dibuka, boleh kosong.
+ * [category] = nama kategori untuk dropdown.
+ * [icon]     = nama file drawable (tanpa ekstensi), boleh kosong.
+ * [tip]      = petunjuk singkat yang ditampilkan sekali sebelum layanan pertama kali dibuka, boleh kosong.
  */
 data class Service(
     val id: String,
     val name: String,
     val url: String,
+    val category: String,
     val icon: String,
     val tip: String,
 )
@@ -26,6 +28,7 @@ fun loadServices(context: Context): List<Service> {
             id = o.getString("id"),
             name = o.getString("name"),
             url = o.getString("url"),
+            category = o.optString("category", "Other"),
             icon = o.optString("icon", ""),
             tip = o.optString("tip", ""),
         )
