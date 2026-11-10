@@ -1,5 +1,5 @@
 [README.md](https://github.com/user-attachments/files/34625177/README.md)
-# Shortcuts
+# Pintas
 
 A lightweight Android launcher that gathers links to Google services on a single screen.
 Ideal for phones with limited storage and RAM—no need to install each app individually.
