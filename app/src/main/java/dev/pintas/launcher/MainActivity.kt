@@ -24,20 +24,30 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+
+private const val PREFS = "pintas"
+private const val KEY_TIPS_DISABLED = "tips_disabled"
+private fun tipSeenKey(id: String) = "tip_seen_$id"
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,6 +69,16 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun LauncherScreen(services: List<Service>) {
     val context = LocalContext.current
+    val prefs = remember { context.getSharedPreferences(PREFS, Context.MODE_PRIVATE) }
+    var pendingTip by remember { mutableStateOf<Service?>(null) }
+
+    fun onServiceClick(service: Service) {
+        val showTip = service.tip.isNotEmpty() &&
+            !prefs.getBoolean(KEY_TIPS_DISABLED, false) &&
+            !prefs.getBoolean(tipSeenKey(service.id), false)
+        if (showTip) pendingTip = service else openUrl(context, service.url)
+    }
+
     LazyVerticalGrid(
         columns = GridCells.Adaptive(minSize = 96.dp),
         modifier = Modifier.safeDrawingPadding(),
@@ -67,8 +87,30 @@ fun LauncherScreen(services: List<Service>) {
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         items(services, key = { it.id }) { service ->
-            ServiceItem(service) { openUrl(context, service.url) }
+            ServiceItem(service) { onServiceClick(service) }
         }
+    }
+
+    pendingTip?.let { service ->
+        AlertDialog(
+            onDismissRequest = { pendingTip = null },
+            title = { Text(service.name) },
+            text = { Text(service.tip) },
+            confirmButton = {
+                TextButton(onClick = {
+                    prefs.edit().putBoolean(tipSeenKey(service.id), true).apply()
+                    pendingTip = null
+                    openUrl(context, service.url)
+                }) { Text(stringResource(R.string.tip_open)) }
+            },
+            dismissButton = {
+                TextButton(onClick = {
+                    prefs.edit().putBoolean(KEY_TIPS_DISABLED, true).apply()
+                    pendingTip = null
+                    openUrl(context, service.url)
+                }) { Text(stringResource(R.string.tip_disable)) }
+            },
+        )
     }
 }
 
